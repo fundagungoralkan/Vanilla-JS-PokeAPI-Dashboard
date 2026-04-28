@@ -3,57 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Pokedex Guide</title>
-
-    <link rel="stylesheet" href="style.css" />
-
+    <title>Pokedex Projesi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <!-- FULL SCREEN HEADER -->
-    <div class="header finisher-header">
-      <h1>Pokedex Guide</h1>
+    <div class="iphone-container">
+      <div class="iphone-notch"></div>
 
-      <div class="search">
-        <input type="text" class="searchInput" />
-        <button class="searchBtn">
-          <i class="fa-solid fa-binoculars"></i>
-        </button>
-      </div>
+      <main class="app-screen">
+        <header>
+          <div class="menu-icon">
+            <span></span>
+            <span></span>
+          </div>
+          <h1 class="main-title">What Pokémon are you looking for?</h1>
+        </header>
+
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by ID, Name or Type"
+            autocomplete="off"
+          />
+        </div>
+
+        <p id="status" class="status-text">Loading...</p>
+
+        <div class="poke-grid" id="pokeContainer"></div>
+      </main>
     </div>
 
-    <!-- POKEMON LIST (HEADER DIŞINDA!) -->
-    <div class="poke-container"></div>
-
-    <!-- FINISHER SCRIPT -->
-    <script src="finisher-header.es5.min.js"></script>
-
-    <!-- INIT -->
-    <script>
-      new FinisherHeader({
-        count: 100,
-        size: { min: 1, max: 40, pulse: 0.4 },
-        speed: {
-          x: { min: 0, max: 1 },
-          y: { min: 0, max: 0.6 },
-        },
-        colors: {
-          background: "#60945c",
-          particles: ["#fbfcca", "#d7f3fe", "#ffd0a7"],
-        },
-        blending: "overlay",
-        opacity: { center: 1, edge: 0 },
-        skew: -2,
-        shapes: ["c"],
-      });
-    </script>
-
-    <!-- APP JS -->
     <script src="app.js"></script>
   </body>
 </html>
