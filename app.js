@@ -11,7 +11,7 @@ let pokemonList = [];
 
 // 2. İnternetten (API) verileri çeken ana fonksiyon
 async function fetchPokemonList() {
-  statusText.textContent = "Pokemonlar yükleniyor...";
+  statusText.textContent = "Loading...";
 
   try {
     // Pokemonların listesini almak için istek gönderiyoruz
